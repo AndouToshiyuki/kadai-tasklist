@@ -1,9 +1,5 @@
 <h1>作成ページ</h1>
 
-
-<%= form_with(model: @task, local: true) do |f| %>
 <%= render 'form', task: @task %>
-
-<% end %>
 
 <%= link_to '一覧に戻る', tasks_path %>
