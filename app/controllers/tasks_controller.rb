@@ -6,6 +6,8 @@ class TasksController < ApplicationController
     if logged_in?
       @task = current_user.tasks.build  # form_with 用
       @tasks = current_user.tasks.order(id: :desc).page(params[:page])
+    else
+      redirect_to login_url
     end
   end
 
