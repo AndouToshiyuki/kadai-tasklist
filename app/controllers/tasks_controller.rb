@@ -13,6 +13,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    #@task = current_user.tasks.find_by(id: params[:id])
   end
 
   def create
