@@ -9,6 +9,10 @@ class TasksController < ApplicationController
 
   def show
     @task = current_user.tasks.find_by(id: params[:id])
+    
+    if @task == nil
+    redirect_to root_url
+    end
   end
 
   def new
